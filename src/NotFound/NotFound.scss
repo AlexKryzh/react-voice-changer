@@ -1,0 +1,13 @@
+@import '/src/assets/vars';
+
+.not-found {
+  align-items: center;
+  display: flex;
+  flex-grow: 2;
+  justify-content: center;
+
+  &__title {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+}

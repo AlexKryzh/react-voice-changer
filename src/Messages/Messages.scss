@@ -1,0 +1,9 @@
+@import '/src/assets/vars';
+
+.messages {
+  right: 2rem;
+  position: fixed;
+  top: 6rem;
+  width: 20rem;
+  z-index: 120;
+}

@@ -1,0 +1,24 @@
+@import '/src/assets/vars';
+
+.voice {
+  display: block;
+  margin-bottom: 1.5rem;
+  position: relative;
+  text-decoration: none;
+  transition: transform ease-in 100ms;
+
+  &__title {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  &__price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 0 $c-white;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}

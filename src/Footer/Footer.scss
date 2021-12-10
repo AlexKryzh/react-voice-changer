@@ -1,0 +1,15 @@
+@import '/src/assets/vars';
+
+.footer {
+  margin-top: auto;
+
+  &__lang {
+    cursor: pointer;
+    text-decoration: none;
+
+    &.is-active {
+      color: $c-spanish-gray;
+      cursor: default;
+    }
+  }
+}

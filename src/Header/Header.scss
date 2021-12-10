@@ -1,0 +1,25 @@
+@import '/src/assets/vars';
+
+.header {
+  &__navbar {
+    background-color: transparent;
+  }
+
+  &__title {
+    color: $c-bright-gray;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $c-bright-gray;
+    }
+  }
+
+  &__nav {
+    .nav-link {
+      color: $c-bright-gray;
+    }
+  }
+}
