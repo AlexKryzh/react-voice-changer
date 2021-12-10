@@ -1,9 +1,35 @@
+@import '/src/assets/vars';
+
 .voices {
   padding-top: 5rem;
 
+  &__title {
+    color: $c-alto;
+    display: flex;
+    font-size: 1.2rem !important;
+    margin-bottom: 3rem !important;
+    overflow: hidden;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    &:after {
+      background-color: $c-mine-shaft;
+      content: "";
+      display: inline-block;
+      height: 1px;
+      left: 0.5rem;
+      position: relative;
+      top: 0.7rem;
+      width: 100%;
+    }
+  }
+
   &__list {
-    list-style: none;
-    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
     padding-left: 0;
+    list-style: none;
   }
 }

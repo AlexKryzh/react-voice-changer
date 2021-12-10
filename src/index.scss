@@ -4,17 +4,17 @@
 
 /* bootstrap customizations */
 $theme-colors: (
-  'primary': $c-electric-blue,
-  'secondary': $c-electric-blue,
-  'warning': $c-atomic-tangerine,
-  'danger': $c-philippine-red
+  'primary': $c-aqua,
+  'secondary': $c-aqua,
+  'warning': $c-canary,
+  'danger': $c-blush-pink
 );
 
 /* import bootstrap to set changes */
 @import '~bootstrap/scss/bootstrap';
 
 body {
-  background-color: $c-bright-gray;
+  background-color: $c-cod-gray;
   color: $c-black;
   font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
     'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;

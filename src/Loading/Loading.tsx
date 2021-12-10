@@ -9,7 +9,7 @@ function Loading() {
     return (
         <aside className={`loading ${appState.isLoading ? 'is-active' : ''}`}>
             <div className="loading__animation">
-                <div className="spinner-border" role="status">
+                <div className="spinner-border text-primary" role="status">
                     <span className="visually-hidden">{t('page.loading')}...</span>
                 </div>
             </div>

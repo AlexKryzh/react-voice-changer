@@ -11,9 +11,14 @@ function Voice(props: VoiceProps) {
     //const { t } = useTranslation();
 
     return (
-        <div className="voice" data-cy="voice">
-            <h1 className="voice__title p-2 text-truncate">{voice?.name}</h1>
-        </div>
+        <button className="voice btn btn-link" title={voice?.name} data-cy="voice">
+            <figure>
+                <span className="voice__image">
+                    <img src={`/images/${voice?.icon}`} alt={voice?.name} />
+                </span>
+                <figcaption className="voice__name text-truncate">{voice?.name}</figcaption>
+            </figure>
+        </button>
     );
 }
 
