@@ -30,7 +30,7 @@ i18n
             loading: 'Loading'
           },
           voices: {
-            title: 'Available Voices'
+            title: 'PRO Voices'
           }
         }
       },
@@ -47,7 +47,7 @@ i18n
             loading: 'Cargando'
           },
           voices: {
-            title: 'Voces Disponibles',
+            title: 'PRO Voces',
           }
         }
       }

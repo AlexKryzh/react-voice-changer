@@ -2,24 +2,24 @@
 
 .header {
   &__navbar {
-    background-color: transparent;
+    background-color: $c-cod-gray;
   }
 
   &__title {
-    color: $c-bright-gray;
+    color: $c-alto;
     font-weight: bolder;
     font-size: 1.2rem;
     text-decoration: none;
     text-transform: uppercase;
 
     &:hover {
-      color: $c-bright-gray;
+      color: $c-alto;
     }
   }
 
   &__nav {
     .nav-link {
-      color: $c-bright-gray;
+      color: $c-alto;
     }
   }
 }

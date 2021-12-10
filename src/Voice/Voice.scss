@@ -1,24 +1,44 @@
 @import '/src/assets/vars';
 
+$image-size: 7rem;
+
 .voice {
   display: block;
-  margin-bottom: 1.5rem;
+  font-weight: 600 !important;
+  padding: 0 1.5rem 1.5rem 1.5rem;
   position: relative;
   text-decoration: none;
   transition: transform ease-in 100ms;
+  width: $image-size + 3rem;
 
-  &__title {
-    font-size: 1.2rem;
-    font-weight: bold;
+  &__image {
+    align-items: center;
+    background-color: $c-alto;
+    border-radius: $image-size;
+    display: flex;
+    height: $image-size;
+    justify-content: center;
+    transition: background-color 0.5s linear;
+    width: $image-size;
   }
 
-  &__price {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-shadow: 1px 1px 0 $c-white;
+  &__name {
+    color: $c-alto;
+    margin-top: 0.5rem;
+    transition: color 0.5s linear;
+  }
+
+  &:focus {
+    box-shadow: unset !important;
   }
 
   &:hover {
-    transform: scale(1.05);
+    .voice__image {
+      background-color: $c-white;
+    }
+
+    .voice__name {
+      color: $c-white;
+    }
   }
 }
