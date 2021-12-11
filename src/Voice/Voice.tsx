@@ -1,18 +1,14 @@
 import './Voice.scss';
-//import { useTranslation } from 'react-i18next';
 import { VoiceModel } from 'shared';
-//import { Dispatch, SetStateAction } from 'react';
 
 type VoiceProps = {
     voice: VoiceModel;
     selected: boolean;
-    onSelect: any;
-    //onSelect: Dispatch<SetStateAction<string | undefined>>
+    onSelect: Function;
 }
 
 function Voice(props: VoiceProps) {
     const { voice, selected, onSelect } = props;
-    //const { t } = useTranslation();
 
     return (
         <button className={`voice btn btn-link ${selected ? 'is-selected' : ''}`} title={voice?.name} data-cy="voice" onClick={() => onSelect(voice?.id)}>

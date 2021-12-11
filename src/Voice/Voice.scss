@@ -8,7 +8,7 @@ $image-size: 7.5rem;
   padding: 0 1.5rem 1.5rem 1.5rem;
   position: relative;
   text-decoration: none;
-  transition: transform ease-in 100ms;
+  transition: transform ease-in 50ms;
   width: $image-size + 3rem;
 
   &.is-selected {
@@ -45,6 +45,8 @@ $image-size: 7.5rem;
   }
 
   &:hover {
+    transition: transform ease-in 100ms;
+
     .voice__image {
       background-color: $c-white;
     }
