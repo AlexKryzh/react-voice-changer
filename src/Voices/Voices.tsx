@@ -6,6 +6,7 @@ import './Voices.scss';
 
 function Voices() {
     const [ voicesData, setVoicesData ] = useState<VoiceModel[]>();
+    const [ selectedVoiceId, setSelectedVoiceId ] = useState<string>();
     const apiUrl = process.env.REACT_APP_API_URL;
     const { t } = useTranslation();
 
@@ -22,12 +23,16 @@ function Voices() {
         init();
     }, [apiUrl]);
 
+    const handleSelect = (voiceId: string ) => {
+        setSelectedVoiceId(voiceId);
+    }
+
     return (
         <section className="voices container-lg">
             <h1 className="voices__title">{t('voices.title')}</h1>
             <ul className="voices__list">
                 { voicesData && voicesData.map((voice: VoiceModel) => {
-                    return <li className="voices__item" key={voice?.id}><Voice voice={voice}/></li>
+                    return <li className="voices__item" key={voice?.id}><Voice voice={voice} selected={voice?.id === selectedVoiceId} onSelect={handleSelect} /></li>
                 })
                 }
             </ul>

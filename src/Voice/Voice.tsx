@@ -1,17 +1,17 @@
 import './Voice.scss';
-//import { useTranslation } from 'react-i18next';
 import { VoiceModel } from 'shared';
 
 type VoiceProps = {
     voice: VoiceModel;
+    selected: boolean;
+    onSelect: Function;
 }
 
 function Voice(props: VoiceProps) {
-    const { voice } = props;
-    //const { t } = useTranslation();
+    const { voice, selected, onSelect } = props;
 
     return (
-        <button className="voice btn btn-link" title={voice?.name} data-cy="voice">
+        <button className={`voice btn btn-link ${selected ? 'is-selected' : ''}`} title={voice?.name} data-cy="voice" onClick={() => onSelect(voice?.id)}>
             <figure>
                 <span className="voice__image">
                     <img src={`/images/${voice?.icon}`} alt={voice?.name} />
