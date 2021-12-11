@@ -1,6 +1,6 @@
 @import '/src/assets/vars';
 
-$image-size: 7rem;
+$image-size: 7.5rem;
 
 .voice {
   display: block;
@@ -10,6 +10,18 @@ $image-size: 7rem;
   text-decoration: none;
   transition: transform ease-in 100ms;
   width: $image-size + 3rem;
+
+  &.is-selected {
+    .voice__image {
+      background-color: $c-aqua;
+    }
+
+    &:hover {
+      .voice__image {
+        background-color: $c-aqua;
+      }
+    }
+  }
 
   &__image {
     align-items: center;
