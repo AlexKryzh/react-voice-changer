@@ -1,24 +1,31 @@
 import './Voice.scss';
 import { VoiceModel } from 'shared';
+import {ReactComponent as HeartIcon} from 'assets/voice-favourite-off.svg';
 
 type VoiceProps = {
     voice: VoiceModel;
     selected: boolean;
-    onSelect: Function;
+    onSetSelected: Function;
+    onSetFavourite: Function;
 }
 
 function Voice(props: VoiceProps) {
-    const { voice, selected, onSelect } = props;
+    const { voice, selected, onSetSelected, onSetFavourite } = props;
 
     return (
-        <button className={`voice btn btn-link ${selected ? 'is-selected' : ''}`} title={voice?.name} data-cy="voice" onClick={() => onSelect(voice?.id)}>
-            <figure>
-                <span className="voice__image">
-                    <img src={`/images/${voice?.icon}`} alt={voice?.name} />
-                </span>
-                <figcaption className="voice__name text-truncate">{voice?.name}</figcaption>
-            </figure>
-        </button>
+        <span className={`voice d-inline-block ${selected ? 'is-selected' : ''}`}>
+            <button className="voice__btn btn btn-link" title={voice?.name} data-cy="voice" onClick={() => onSetSelected(voice.id)}>
+                <figure>
+                    <span className="voice__image">
+                        <img src={`/images/${voice.icon}`} alt={voice.name} />
+                    </span>
+                    <figcaption className="voice__name text-truncate">{voice.name}</figcaption>
+                </figure>
+            </button>
+            <button className={`voice__favourite btn btn-link ${voice.favourite ? 'is-favourite' : ''}`} title={voice.name} data-cy="voice-favourite" onClick={() => onSetFavourite(voice?.id)}>
+                <HeartIcon className="voice__favourite-icon" />
+            </button>
+        </span>
     );
 }
 

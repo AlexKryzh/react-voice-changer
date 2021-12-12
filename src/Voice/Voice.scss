@@ -3,13 +3,13 @@
 $image-size: 7.5rem;
 
 .voice {
-  display: block;
-  font-weight: 600 !important;
-  padding: 0 1.5rem 1.5rem 1.5rem;
   position: relative;
-  text-decoration: none;
-  transition: transform ease-in 50ms;
-  width: $image-size + 3rem;
+
+  &:hover {
+    .voice__favourite {
+      opacity: 1;
+    }
+  }
 
   &.is-selected {
     .voice__image {
@@ -20,6 +20,20 @@ $image-size: 7.5rem;
       .voice__image {
         background-color: $c-aqua;
       }
+    }
+  }
+
+  &__btn {
+    display: block;
+    font-weight: 600 !important;
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    position: relative;
+    text-decoration: none;
+    width: $image-size + 3rem;
+    z-index: 0;
+
+    &:focus {
+      box-shadow: unset !important;
     }
   }
 
@@ -40,10 +54,6 @@ $image-size: 7.5rem;
     transition: color 0.5s linear;
   }
 
-  &:focus {
-    box-shadow: unset !important;
-  }
-
   &:hover {
     transition: transform ease-in 100ms;
 
@@ -53,6 +63,43 @@ $image-size: 7.5rem;
 
     .voice__name {
       color: $c-white;
+    }
+  }
+
+  &__favourite {
+    align-items: center;
+    background-color: $c-white;
+    border-radius: $image-size / 3;
+    display: flex;
+    height: $image-size / 3;
+    justify-content: center;
+    opacity: 0;
+    padding: 0;
+    position: absolute;
+    transition: opacity 0.25s linear;
+    right: 0.5rem;
+    top: 0.5rem;
+    width: $image-size / 3;
+    z-index: 10;
+
+    &:focus {
+      box-shadow: unset;
+    }
+
+    &.is-favourite {
+      .voice__favourite-icon {
+        g path {
+          fill: $c-aqua;
+        }
+      }
+    }
+  }
+
+  &__favourite-icon {
+    height: 1rem;
+    width: 1rem;
+    g path {
+      fill: $c-iron;
     }
   }
 }
