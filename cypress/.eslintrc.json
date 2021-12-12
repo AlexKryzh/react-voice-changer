@@ -1,7 +1,7 @@
 {
     "plugins": [
-      "eslint",
-      "cypress"
+      "cypress",
+      "eslint-plugin"
     ],
     "rules": {
       "cypress/no-assigning-return-values": "error",
@@ -12,7 +12,6 @@
       "cypress/no-pause": "error"
     },
     "env": {
-      "cypress": true,
       "cypress/globals": true
     },
     "extends": [

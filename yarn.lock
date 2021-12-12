@@ -5499,6 +5499,14 @@ eslint-plugin-cypress@^2.12.1:
   dependencies:
     globals "^11.12.0"
 
+eslint-plugin-eslint-plugin@^4.0.3:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-eslint-plugin/-/eslint-plugin-eslint-plugin-4.0.3.tgz#149a5382620f4ea8b85a35bc549c4a8a45fac53e"
+  integrity sha512-10Eb3AO4PF7PuJbTSBAD1dLsu1RHtGxeLEjUpVVEyQaPtSmlEvCK7LMpDow1Xv+kHBujm4u9OtoOQ//WIijLCw==
+  dependencies:
+    eslint-utils "^3.0.0"
+    estraverse "^5.2.0"
+
 eslint-plugin-flowtype@^5.2.0:
   version "5.10.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-flowtype/-/eslint-plugin-flowtype-5.10.0.tgz#7764cc63940f215bf3f0bd2d9a1293b2b9b2b4bb"

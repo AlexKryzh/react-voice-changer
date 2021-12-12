@@ -6,7 +6,8 @@
 
 describe('Cypress', () => {   
     it('is working', () => {
-        expect(true).to.equal(true)
+        /* eslint-disable jest/valid-expect */
+        expect(true).to.equal(true);
     }) 
     
     it('opens the app', () => {   
