@@ -54,6 +54,15 @@ function Voices() {
         setSortDesc(status);
     }
 
+    const handleRandomSelect = () => {
+        const notSelectedVoices = resultVoices.filter((voice: VoiceModel) => voice.id !== selectedVoiceId);
+        if(!notSelectedVoices.length) {
+            return;
+        }
+        const randomVoice = notSelectedVoices[Math.floor(Math.random()*notSelectedVoices.length)];
+        setSelectedVoiceId(randomVoice.id);
+    }
+
     const handleSetSearchText = (e: React.FormEvent<HTMLInputElement> ) => {
         const text = e.currentTarget.value;
         setSearchText(text ? text.trim(): ''); //removes start/end spaces with trim
@@ -78,7 +87,8 @@ function Voices() {
             <VoicesHeader 
                 sortDesc={sortDesc} 
                 onSetSortDesc={handleSetSortDesc}
-                onSetSearchText={handleSetSearchText} />
+                onSetSearchText={handleSetSearchText}
+                onRandomSelect={handleRandomSelect} />
             {/* Each section should be a new component <VoiceList> to not repeat the code, I started to do it but discarted the changes then I saw the size of this refactor... */}
             <section >
                 <h1 className="voices__title">{t('voices.favourites')}</h1>
