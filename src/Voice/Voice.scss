@@ -5,12 +5,6 @@ $image-size: 7.5rem;
 .voice {
   position: relative;
 
-  &:hover {
-    .voice__favourite {
-      opacity: 1;
-    }
-  }
-
   &.is-selected {
     .voice__image {
       background-color: $c-aqua;
@@ -56,6 +50,10 @@ $image-size: 7.5rem;
 
   &:hover {
     transition: transform ease-in 100ms;
+
+    .voice__favourite {
+      opacity: 1;
+    }
 
     .voice__image {
       background-color: $c-white;

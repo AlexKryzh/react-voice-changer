@@ -7,8 +7,9 @@ Every components has stylesheet, but without using react native css modules.
 We dont use it because the current approach makes code difficult to read.
 
 ## TODO.
+- Filter by tags feature.\
+- Markup for VoicesHeader component there is search/sort/random options.\
 - Create VoicesList componete to not repeat the code in Voices Component.\
-- Finish markup for VoicesHeader component there is search/sort/random options.\
 - Add testa for components.\
 - Add e2e tests.\
 

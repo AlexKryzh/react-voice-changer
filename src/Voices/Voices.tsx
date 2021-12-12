@@ -92,7 +92,7 @@ function Voices() {
             {/* Each section should be a new component <VoiceList> to not repeat the code, I started to do it but discarted the changes then I saw the size of this refactor... */}
             <section >
                 <h1 className="voices__title">{t('voices.favourites')}</h1>
-                <ul className="voices__list">
+                <ul className="voices__list" data-cy="voices-favourites">
                     { favouriteVoices && favouriteVoices.map((voice: VoiceModel) => {
                         return <li className="voices__item" key={`favourite_${voice?.id}`}>
                             <Voice 
@@ -107,7 +107,7 @@ function Voices() {
             </section>
             <section>
                 <h1 className="voices__title">{t('voices.title')}</h1>
-                <ul className="voices__list">
+                <ul className="voices__list" data-cy="voices-list">
                     { resultVoices && resultVoices.map((voice: VoiceModel) => {
                         return <li className="voices__item" key={voice?.id}>
                             <Voice 
