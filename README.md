@@ -8,6 +8,9 @@ We dont use it because the current approach makes code difficult to read.
 
 ## TODO.
 - Create VoicesList componete to not repeat the code in Voices Component.\
+- Finish markup for VoicesHeader component there is search/sort/random options.\
+- Add testa for components.\
+- Add e2e tests.\
 
 
 ## Install Dependencies
