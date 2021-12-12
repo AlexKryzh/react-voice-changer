@@ -1,6 +1,6 @@
 import './Voice.scss';
 import { VoiceModel } from 'shared';
-import {ReactComponent as HeartIcon} from 'assets/voice-favourite-off.svg';
+import {ReactComponent as HeartIcon} from 'assets/voice-favourite.svg';
 
 type VoiceProps = {
     voice: VoiceModel;
