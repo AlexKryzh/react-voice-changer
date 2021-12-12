@@ -1,15 +1,25 @@
 @import '/src/assets/vars';
 
 .footer {
+  color: $c-alto;
   margin-top: auto;
 
   &__lang {
+    color: $c-alto;
     cursor: pointer;
     text-decoration: none;
 
+    &:hover {
+      color: $c-aqua;
+    }
+
     &.is-active {
-      color: $c-alto;
+      color: $c-white;
       cursor: default;
+
+      &:hover {
+        color: $c-white;
+      }
     }
   }
 }

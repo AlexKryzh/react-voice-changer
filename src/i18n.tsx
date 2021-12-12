@@ -30,7 +30,8 @@ i18n
             loading: 'Loading'
           },
           voices: {
-            title: 'PRO Voices'
+            title: 'PRO Voices',
+            favourites: 'Favourites Voices'
           }
         }
       },
@@ -48,6 +49,7 @@ i18n
           },
           voices: {
             title: 'PRO Voces',
+            favourites: 'Voces Favoritos'
           }
         }
       }

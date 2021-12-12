@@ -6,6 +6,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Every components has stylesheet, but without using react native css modules. 
 We dont use it because the current approach makes code difficult to read.
 
+## TODO.
+- Create VoicesList componete to not repeat the code in Voices Component.\
+
 
 ## Install Dependencies
 ### `yarn`
