@@ -9,6 +9,7 @@ function Voices() {
     const [ voicesData, setVoicesData ] = useState<VoiceModel[]>([]);
     const [ resultVoices, setResultVoices ] = useState<VoiceModel[]>([]); //voices after sorting, searching and filtering
     const [ sortDesc, setSortDesc ] = useState<boolean>(false);
+    const [ searchText, setSearchText ] = useState<string>('');
     const [ favouriteVoices, setFavouriteVoices ] = useState<VoiceModel[]>([]);
     const [ selectedVoiceId, setSelectedVoiceId ] = useState<string>();
     const apiUrl = process.env.REACT_APP_API_URL;
@@ -28,14 +29,17 @@ function Voices() {
     }, [apiUrl]);
 
     useEffect(() => {
-        const voices = voicesData.map(a => Object.assign({}, a));
+        let voices = voicesData.map(a => Object.assign({}, a));
         //resultVoices contain voices list after applying searh and sort....
         voices.sort((a,b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0));
         if (sortDesc) {
             voices.reverse();
         }
+        if (searchText) {
+            voices = voices.filter((voice: VoiceModel) => voice.name.toLowerCase().includes(searchText.toLowerCase())); //pass to lowercase, so the search will work with uppercase/lowercase
+        }
         setResultVoices(voices);
-    }, [voicesData, sortDesc]);
+    }, [voicesData, sortDesc, searchText]);
 
     useEffect(() => {
         //search and sort are applied to favourite voices too
@@ -48,6 +52,11 @@ function Voices() {
 
     const handleSetSortDesc = (status: boolean ) => {
         setSortDesc(status);
+    }
+
+    const handleSetSearchText = (e: React.FormEvent<HTMLInputElement> ) => {
+        const text = e.currentTarget.value;
+        setSearchText(text ? text.trim(): ''); //removes start/end spaces with trim
     }
 
     const handleSetFavourite = (voiceId: string) => {
@@ -68,7 +77,8 @@ function Voices() {
         <div className="voices container-lg">
             <VoicesHeader 
                 sortDesc={sortDesc} 
-                onSetSortDesc={handleSetSortDesc} />
+                onSetSortDesc={handleSetSortDesc}
+                onSetSearchText={handleSetSearchText} />
             {/* Each section should be a new component <VoiceList> to not repeat the code, I started to do it but discarted the changes then I saw the size of this refactor... */}
             <section >
                 <h1 className="voices__title">{t('voices.favourites')}</h1>
