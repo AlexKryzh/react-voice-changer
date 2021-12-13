@@ -5,13 +5,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## BEM used for css.
 Every components has stylesheet, but without using react native css modules. 
 We dont use it because the current approach makes code difficult to read.
-
 ## TODO.
 - Filter by tags feature.\
-- Markup for VoicesHeader component there is search/sort/random options.\
+- Markup for VoicesHeader component with search/sort/random options.\
 - Create VoicesList componete to not repeat the code in Voices Component.\
 - Add testa for components.\
 - Add e2e tests.\
+- Add css height animation effect to voices list, applied for example in the moment then favourite voices pass from empty to filled.\
+- Scroll to selected element then random button clicked.\
+- Lazy loading can be used in large voices lists.\
 
 
 ## Install Dependencies
